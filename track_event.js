@@ -26,7 +26,7 @@ XMLHttpRequest.prototype.open = function(a,b) {
 XMLHttpRequest.prototype.send = function(a,b) {
   if (!a) var a='';
   if (!b) var b='';
-  s_ajaxListener.tempSend.apply(this, arguments);
+  //s_ajaxListener.tempSend.apply(this, arguments);
   if(s_ajaxListener.method.toLowerCase() == 'post')s_ajaxListener.data = a;
   s_ajaxListener.callback();
 }
