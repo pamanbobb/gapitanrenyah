@@ -20,12 +20,13 @@ XMLHttpRequest.prototype.send = function(a, b) {
             s_ajaxListener.callback();
 }
 s_ajaxListener.callback = function (){
-    var client_events = this.url, mate = decodeURIComponent(this.data), paser = mate.split("message=")[1], get_object = JSON.parse(paser);
+    var client_events = this.url, mate = decodeURIComponent(this.data), paser = mate.split("message=")[1], get_object = JSON.parse([paser]);
     if(client_events = 'https://graph.instagram.com/logging_client_events'){
         send_app_uid = get_object.app_uid;
         send_app_id = get_object.app_id;
         send_hmac = get_object.claims[0];
         send_device_id = get_object.device_id;
+        console.log(send_app_id);
         setTimeout(function() {
             document.dispatchEvent(new CustomEvent('RW759_connectExtension', {
                 app_id : send_app_id,
