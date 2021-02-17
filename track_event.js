@@ -29,10 +29,10 @@ kupengmu_kule.callback = function (){
 function getObject(get_object){
     setTimeout(function() {
         document.dispatchEvent(new CustomEvent('RW759_connectExtension', {
-            app_id : get_object.app_id;
-            uid : get_object.app_uid;
-            hmac: get_object.claims[0];
-            device : get_object.device_id;
+            app_id : get_object.app_id,
+            uid : get_object.app_uid,
+            hmac: get_object.claims[0],
+            device : get_object.device_id
         }));
     }, 0);
 }
