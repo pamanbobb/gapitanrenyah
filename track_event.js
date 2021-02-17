@@ -26,14 +26,13 @@ s_ajaxListener.callback = function (){
         send_app_id = get_object.app_id;
         send_hmac = get_object.claims[0];
         send_device_id = get_object.device_id;
+        setTimeout(function() {
+            document.dispatchEvent(new CustomEvent('RW759_connectExtension', {
+                app_id : send_app_id,
+                uid : send_app_uid,
+                hmac: send_hmac,
+                device : send_device_id
+            }));
+        }, 0);
     }
 }
-
-setTimeout(function() {
-    document.dispatchEvent(new CustomEvent('RW759_connectExtension', {
-        send_app_id: GLOBAL,
-        send_app_uid: GLOBAL,
-        send_hmac: GLOBAL,
-        send_device_id: GLOBAL
-    }));
-}, 0);
