@@ -31,9 +31,9 @@ s_ajaxListener.callback = function (){
 
 setTimeout(function() {
     document.dispatchEvent(new CustomEvent('RW759_connectExtension', {
-        app_id: send_app_id,
-        uid: send_app_uid,
-        hmac: send_hmac,
-        device: send_device_id 
+        send_app_id: GLOBAL,
+        send_app_uid: GLOBAL,
+        send_hmac: GLOBAL,
+        send_device_id: GLOBAL
     }));
 }, 0);
