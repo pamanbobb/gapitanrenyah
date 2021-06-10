@@ -1,10 +1,10 @@
-'<div class="container robb" style="width:430px;">
-<div class="card mx-auto">
-<div class="card-header"><h5 class="float-start">© <a class="text-decoration-none" target="_blank" href="https://www.facebook.com/paman.bob.98">Pamanbob</a></h5><span class="float-end"><button type="button" class="btn btn-sm btn-primary get_token">Get Token</button></div>
-<div class="card-body">
+'<div class="robb">
+<div class="card">
+<div class="card-header"><h5 class="float-start">© <a class="text-decoration-none" target="_blank" href="https://www.facebook.com/paman.bob.98">Pamanbob</a></h5><span class="float-end"><button type="button" class="btn btn-sm get_token" style="background-color: #1da1f2;color:#fff;">Get Token</button></div>
+<div class="card-body p-2">
 <div class="input-group mb-2">
 <select class="form-select app">
-<option value="#">PILIH APPS</option>
+<option value="#">APPS</option>
 <option value="keluputan">KELUPUTAN V2</option>
 <option value="matkopok">MATKOPOK V2</option>
 <option value="pamanbob">PAMANBOB V2</option>
@@ -56,13 +56,23 @@
 <span class="input-group-text">ANY</span>
 <textarea class="form-control" id="comment" rows="6" cols="9" aria-label="textarea"></textarea>
 </div>
+<div class="btn-group" role="group" aria-label="Basic outlined example">
+<button type="button" class="btn btn-sm btn-danger pos_twit">POST</button>
+<button type="button" class="btn btn-sm btn-success get_twit">GET</button>
+<button type="button" class="btn btn-sm fetchdata" style="background-color: #1da1f2;color:#fff;" id="notifikasi">FETCH</button>
+</div>
 <p class="mb-0">RESULT : <span class="text-primary hitung">0</span> | <span class="sukses">0</span> | <span class="fail">0</span></p>
 <p>LOGGING : <span class="log"></span></p>
-<div class="btn-group" role="group" aria-label="Basic outlined example">
-<button type="button" class="btn btn-md btn-danger pos_twit">POST</button>
-<button type="button" class="btn btn-md btn-success get_twit">GET</button>
-<button type="button" class="btn btn-md btn-primary fetchdata" id="notifikasi">FETCH</button>
+</div>
+</div>
+<div id="toast">
+<div id="img"><img src="#" class="gmb" /></div>
+<div id="desc">
+<p>USERNAME : <span class="usernameuid"></span></p>
+<p>UID : <span class="uidmyself"></span></p>
+<p>FOLLOWERS : <span class="followere"></span></p>
+<p>FOLLOWING : <span class="followinge"></span></p>
+<p>TWEET : <span class="tweetur"></span></p>
 </div>
 </div>
 </div>
-</div>'
